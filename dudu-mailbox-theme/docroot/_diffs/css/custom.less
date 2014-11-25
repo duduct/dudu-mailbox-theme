@@ -1,0 +1,276 @@
+@base-wrap-padding: 6px 12px;
+@import "variables.less";
+@import "mixins.less";
+
+html, body {
+    height: 100%;
+}
+
+#wrapper {
+	padding: 0!important;
+}
+
+#banner {
+    * {
+        font-weight: normal;
+    }
+	#heading {
+	    background: @base-blue;
+		padding: @base-wrap-padding;
+		ul.banner-heading-right-control {
+		    float: right;
+		    list-style-type: none;
+		    >li {
+		        display: inline-block;
+		        vertical-align: middle;
+		    }
+		}
+		a.dropdown-toggle {
+		    color: white;
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+		.dd-site-title {
+		    position: relative;
+		    padding-left: 60px;
+		    float: left;
+		    .logo {
+		        height: 50px;
+		        width: 50px;
+		        position: absolute;
+		        left: 0;
+		    }
+		    .dd-site-info {
+		        position: relative;
+		        top: 5px;
+		        .dd-site-company {
+		            text-transform: uppercase;
+		            color: white;
+		            font-size: 14px;
+		        }
+		        .dd-site-name {
+		            font-size: 14px;
+		            color: lighten(yellow, 10);
+		        }
+		    }
+		}
+	}
+	&:after {
+	   .clear-float;
+	}
+}
+
+#footer {
+	text-align: center;
+	font-size: 10px;
+	color :#999;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	padding: 5px 0px;
+	p {
+	    margin: 0;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	#footer-company-name, #footer-company-subtitle {
+	    font-size: 12px;
+        color: @grey-700;
+    }
+
+	#footer-company-subtitle {
+		font-size: 10px;
+		color: @grey-500;
+	}
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+#content {
+    margin-bottom: 64px;
+}
+
+#navigation {
+	padding: 12px 0 0;
+	ul {
+		li {
+			transition: .2s ease;
+			.child-menu {
+    		    display: none;
+    		    position: absolute;
+    		    z-index: 2;
+    		    background: #005F9F;
+    		    top: 50%;
+    		    left: 0;
+    		    transition: .2s ease;
+    		    >li {
+    		        >a {
+    		            display: block;
+    		        }
+    		    }
+    		}
+			&:hover {
+			    .child-menu {
+			        display: block;
+			        top: 100%;
+			    }
+			    a {
+			        color: white;
+			    }
+			}
+			.input-append {
+			    margin: 0;
+			}
+			.add-page-editor {
+				.add-page-editor-input {
+					padding: 0;
+					border-radius: 0;
+					box-shadow: inset 0 -1px rgba(255,255,255,.5);
+					background: transparent;
+                    border: 0;
+				}
+				button {
+					padding: 5px 10px;
+                    background: 0;
+                    border: 0;
+                    min-width: 0;
+                    box-sizing: border-box;
+				}
+			}
+		}
+	}
+}
+
+#sign-in {
+	float: right;
+	margin-top: 10px;
+	color: white;
+	line-height: 20px;
+	padding: 6px 12px;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: .2s ease;
+}
+
+#sign-in:hover {
+	background: rgba(255,255,255,.1);
+}
+
+#sign-in:active {
+	background: rgba(0,0,0,.2);
+	outline: none;
+}
+
+#hrefFm {
+    margin: 0;
+}
+
+.logo {
+    img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.align-center {
+	margin: 0 auto;
+}
+
+.portlet-body {
+    .alert {
+        margin: 12px;
+    }
+}
+.lfr-nav-hover {
+    .modify-pages {
+        .delete-tab {
+            text-shadow: none;
+            color: rgba(255, 255, 255, .7);
+            font-size: 18px;
+            line-height: 24px;
+            height: 24px;
+            top: 0;
+            right: 6px;
+            margin: 0;
+            padding: 0;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+
+.cimarit-tool {
+    form {
+        margin: 12px auto;
+        margin-bottom: 0;
+        input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea, .uneditable-input {
+            width: auto;
+        }
+        input[type='text'] {
+            line-height: 15px;
+        }
+        select {
+            padding: 2px 6px;
+        }
+        font-size: 0;
+    }
+    .btn {
+        margin-bottom: 5px;
+        vertical-align: top;
+    }
+    .control-group {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 6px;
+        .control-label {
+            display: inline-block;
+        }
+    }
+}
+
+
+//Customize login form
+
+#portlet_58 {
+    width: 255px;
+    margin: 0 auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-top: 50px;
+    border-radius: 2px;
+    transition: .2s ease;
+    &:hover {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+    .navigation {
+        display: none;
+    }
+    .btn {
+        width: 100%;
+    }
+    form, .button-holder {
+        margin: 0;
+    }
+    .portlet-body {
+        background: white;
+    }
+    .portlet-content {
+        padding: 12px;
+        .control-group {
+            input[type='text'], input[type='password'] {
+                margin: 0;
+            }
+        }
+        background: white;
+    }
+    .portlet-topper {
+        display: none;
+    }
+}

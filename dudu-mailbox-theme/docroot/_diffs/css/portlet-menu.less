@@ -1,0 +1,24 @@
+ul.portlet-menu {
+    list-style-type: none;
+    li {
+        display: inline-block;
+        .radius-top(3px);
+        a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            color: rgba(255,255,255,.6);
+            padding: @btn-padding;
+            &:hover {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    li.active {
+        background: white;
+        a {
+            color: @base-blue;
+        }
+    }
+}
