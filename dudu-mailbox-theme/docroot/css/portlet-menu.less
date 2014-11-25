@@ -1,22 +1,21 @@
 ul.portlet-menu {
     list-style-type: none;
+    background: #FAFBFC;
+    margin: 0 0 10px;
     li {
         display: inline-block;
-        .radius-top(3px);
         a {
             text-decoration: none;
-            color: white;
+            color: black;
             display: block;
-            color: rgba(255,255,255,.6);
-            padding: @btn-padding;
+            padding: 6px 12px;
             &:hover {
                 text-decoration: none;
-                color: white;
+                color: @base-blue;
             }
         }
     }
     li.active {
-        background: white;
         a {
             color: @base-blue;
         }

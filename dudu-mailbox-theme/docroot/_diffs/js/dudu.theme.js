@@ -10,4 +10,18 @@ $(function() {
 				}
 			});
 	});
+	var windowHeight = $(window).height();
+	var windowWidth = $('body').innerWidth();
+	var height = windowHeight - $(".w20").offset().top - $('#footer').outerHeight();
+	$('.w20').css('min-height', height);
+	$('.main-content').css('width', windowWidth - $('.w20').outerWidth() - 10);
+	
+	$( window ).resize(function() {
+		var windowHeight = $(window).height();
+		var windowWidth = $('body').innerWidth();
+		var height = windowHeight - $(".w20").offset().top - $('#footer').outerHeight();
+		$('.w20').css('min-height', height);
+		
+		$('.main-content').css('width', windowWidth - $('.w20').outerWidth() - 10);
+	});
 });

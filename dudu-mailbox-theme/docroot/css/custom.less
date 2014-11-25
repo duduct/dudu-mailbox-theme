@@ -7,16 +7,20 @@ html, body {
 }
 
 #wrapper {
-	padding: 0!important;
+	padding: 0;
 }
 
 #banner {
     * {
         font-weight: normal;
     }
+    background: url("../images/header.jpg") 0 0;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+    box-shadow: 0 2px 3px rgba(0,0,0,.5);
+    position: relative;
+    z-index: 1;
+    padding: 10px;
 	#heading {
-	    background: @base-blue;
-		padding: @base-wrap-padding;
 		ul.banner-heading-right-control {
 		    float: right;
 		    list-style-type: none;
@@ -28,8 +32,13 @@ html, body {
 		a.dropdown-toggle {
 		    color: white;
             text-decoration: none;
+            text-shadow: 0 -1px black !important;
             &:hover {
                 text-decoration: none;
+            }
+            .user-notifications-count {
+                background: rgba(0,0,0,.1);
+                border: 1px solid rgba(255,255,255,.1);
             }
         }
 		.dd-site-title {
@@ -45,14 +54,15 @@ html, body {
 		    .dd-site-info {
 		        position: relative;
 		        top: 5px;
+		        font-size: 14px;
 		        .dd-site-company {
-		            text-transform: uppercase;
 		            color: white;
-		            font-size: 14px;
+		            font-weight: bold;
+		            text-shadow: 0 -1px black !important;
 		        }
 		        .dd-site-name {
-		            font-size: 14px;
-		            color: lighten(yellow, 10);
+		            color: #de1;
+		            text-shadow: 0 -1px black !important;
 		        }
 		    }
 		}
@@ -71,6 +81,7 @@ html, body {
 	bottom: 0;
 	width: 100%;
 	border-top: 1px solid #ccc;
+	background: #FAFAFA;
 	padding: 5px 0px;
 	p {
 	    margin: 0;
@@ -91,10 +102,6 @@ html, body {
 #wrapper {
     min-height: 100%;
     position: relative;
-}
-
-#content {
-    margin-bottom: 64px;
 }
 
 #navigation {

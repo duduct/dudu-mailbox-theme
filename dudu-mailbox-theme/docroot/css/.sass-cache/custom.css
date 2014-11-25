@@ -16,14 +16,18 @@ body {
   height: 100%; }
 
 #wrapper {
-  padding: 0 !important; }
+  padding: 0; }
+
+#banner {
+  background: url("../images/header.jpg") 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  padding: 10px; }
 
 #banner * {
   font-weight: normal; }
-
-#banner #heading {
-  background: #437afe;
-  padding: 6px 12px; }
 
 #banner #heading ul.banner-heading-right-control {
   float: right;
@@ -35,10 +39,15 @@ body {
 
 #banner #heading a.dropdown-toggle {
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  text-shadow: 0 -1px #000000 !important; }
 
 #banner #heading a.dropdown-toggle:hover {
   text-decoration: none; }
+
+#banner #heading a.dropdown-toggle .user-notifications-count {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1); }
 
 #banner #heading .dd-site-title {
   position: relative;
@@ -53,16 +62,17 @@ body {
 
 #banner #heading .dd-site-title .dd-site-info {
   position: relative;
-  top: 5px; }
-
-#banner #heading .dd-site-title .dd-site-info .dd-site-company {
-  text-transform: uppercase;
-  color: white;
+  top: 5px;
   font-size: 14px; }
 
+#banner #heading .dd-site-title .dd-site-info .dd-site-company {
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 -1px #000000 !important; }
+
 #banner #heading .dd-site-title .dd-site-info .dd-site-name {
-  font-size: 14px;
-  color: #ffff33; }
+  color: #de1;
+  text-shadow: 0 -1px #000000 !important; }
 
 #banner:after {
   content: "";
@@ -78,6 +88,7 @@ body {
   bottom: 0;
   width: 100%;
   border-top: 1px solid #ccc;
+  background: #FAFAFA;
   padding: 5px 0px; }
 
 #footer p {
@@ -97,9 +108,6 @@ body {
 #wrapper {
   min-height: 100%;
   position: relative; }
-
-#content {
-  margin-bottom: 64px; }
 
 #navigation {
   padding: 12px 0 0; }

@@ -9,12 +9,25 @@
         border: 0;
         th, td {
             border: 0;
-        }
-        td {
-            border-top: 1px solid #ddd;
+            &:first-child {
+                .radius-left(@base-radius);
+            }
+            &:last-child {
+                .radius-right(@base-radius);
+            }
         }
         a.btn {
             display: inline-block;
+        }
+    }
+    .search-container-content-link {
+        a {
+            color: @base-blue;
+            display: inline;
+            &:hover {
+                color: darken(@base-blue, 10);
+                text-decoration: underline;
+            }
         }
     }
 }

@@ -5,6 +5,13 @@
     }
     td, th {
         padding: 4px;
+        border-top: 1px solid transparent;
+        &:firs-child {
+            .radius-left(@base-radius);
+        }
+        &:last-child {
+            .radius-right(@base-radius);
+        }
     }
     .btn {
         padding: 3px 15px;
