@@ -1,7 +1,3 @@
-@tag-color: #D8EEFF;
-@base-padding: 2px 3px;
-@list-padding: 6px 24px;
-
 @import "eic-qlcv.less";
 
 @import "variables.less";
@@ -13,7 +9,6 @@
 @import "table.less";
 @import "btn.less";
 @import "tab.less";
-@import "form-actions.less";
 @import "form.less";
 @import "tag.less";
 
@@ -30,7 +25,7 @@ body {
     font-size: @font-size;
     line-height: 1.42857143;
     height: 100%;
-    background: white;
+    background: #F6F6F6;
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
     color: black;
 }
@@ -67,6 +62,11 @@ label, input,  button,  select,  textarea {
     font-size: 12px;
 }
 
+select, input[type="file"] {
+    height: 22px;
+    line-height: 22px;
+}
+
 @media (max-width: 979px) {
     input[type="color"],
     input[type="date"],
@@ -88,7 +88,7 @@ label, input,  button,  select,  textarea {
     .navbar-search .search-query,
     .uneditable-input {
         font-size: 12px!important;
-        padding: 2px 6px;
+        padding: 0px 6px;
     }
     .btn {
         font-size: 12px!important;
@@ -107,7 +107,7 @@ label, input,  button,  select,  textarea {
 
 select,  textarea,  input[type="text"],  input[type="password"],  input[type="datetime"],  input[type="datetime-local"],  input[type="date"],  input[type="month"],  input[type="time"],  input[type="week"],  input[type="number"],  input[type="email"], input[type="url"],  input[type="search"],  input[type="tel"],  input[type="color"],  .uneditable-input {
     font-size: @font-size;
-    padding: 2px 6px;
+    padding: 0px 6px;
     box-shadow: none;
     border-radius: @base-radius;
 }
@@ -180,7 +180,7 @@ input[type="color"]:focus,
 }
 
 .column-content, .column-content-center {
-    padding: 0 10px;
+    padding: 0 @base-margin;
 }
 
 .page-header {
@@ -227,7 +227,7 @@ fieldset {
         >input {
             box-sizing: border-box;
             width: 100%;
-            height: 26px;
+            height: 22px;
         }
     }
     >span + span {
@@ -316,7 +316,7 @@ fieldset {
         .portlet-content-container {
             .portlet-body {
                 .navigation {
-                    margin: -10px;
+                    margin: -@base-margin;
                 }
             }
         }
@@ -334,8 +334,7 @@ fieldset {
         list-style-type: none;
         margin: 0;
         li {
-            padding: 2px 6px;
-            background: #f5f5f5;
+            padding: 0px 6px;
             border-radius: @base-radius;
             border: 1px solid #d9d9d9;
         }
@@ -343,7 +342,7 @@ fieldset {
             margin-top: 2px;
         }
     }
-    margin: 0 0 10px;
+    margin: 0 0 @base-margin;
 }
 
 .yui3-aclist-hidden {

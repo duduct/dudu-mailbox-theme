@@ -4,10 +4,10 @@
 @import "congvan-layout.less";
 
 #congvan-header {
-	border: 1px solid rgba(0, 0, 0, 0.1);
     position: relative;
+    padding: @base-margin;
     .portlet-menu {
-        margin: 0;
+        margin: -@base-margin;
     }
 }
 
@@ -27,6 +27,9 @@ textarea {
     text-align: right;
 }
 
+#content {
+    margin-bottom: 57px;
+}
 // For theme
 
 .input-group {
@@ -138,7 +141,7 @@ ul.dudu-list {
     }
     .paper-content {
         margin: 0;
-        padding: 10px;
+        padding: @base-margin;
         position: relative;
         .cke_chrome {
             margin: 0 -12px;
@@ -186,7 +189,7 @@ ul.dudu-list {
 .paper-congvan {
     border: 1px solid rgba(0,0,0,.2);
     box-sizing: border-box;
-    padding: 10px;
+    padding: @base-margin;
     box-shadow: 0 1px 2px rgba(0,0,0,.1), inset 0 0 100px rgba(0,0,0,.05);
     .radius(2px);
     .control-group {

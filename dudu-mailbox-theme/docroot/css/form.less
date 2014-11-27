@@ -1,6 +1,8 @@
+@import "form-actions.less";
+
 .form-horizontal {
     .control-label{
-        margin-right: 10px;
+        margin-right: @base-margin;
     }
     
     .control-group {
@@ -67,11 +69,11 @@
                 margin-top: 2px;
             }
         }
-        margin: 0 0 10px;
+        margin: 0 0 @base-margin;
     }
     .form-actions {
         text-align: left;
-        padding-left: 330px;
+        padding-left: @label-width + @base-margin;
     }
 }
 
@@ -99,7 +101,7 @@
             padding-top: 5px;
         }
         .form-actions {
-            padding-left: 10px;
+            padding-left: @base-margin;
         }
         
         .file-list {

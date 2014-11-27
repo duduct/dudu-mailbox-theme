@@ -10,18 +10,18 @@ $(function() {
 				}
 			});
 	});
-	var windowHeight = $(window).height();
-	var windowWidth = $('body').innerWidth();
-	var height = windowHeight - $(".w20").offset().top - $('#footer').outerHeight();
-	$('.w20').css('min-height', height);
-	$('.main-content').css('width', windowWidth - $('.w20').outerWidth() - 10);
-	
+	resizeSidebar();
 	$( window ).resize(function() {
-		var windowHeight = $(window).height();
-		var windowWidth = $('body').innerWidth();
-		var height = windowHeight - $(".w20").offset().top - $('#footer').outerHeight();
-		$('.w20').css('min-height', height);
-		
-		$('.main-content').css('width', windowWidth - $('.w20').outerWidth() - 10);
+		resizeSidebar();
 	});
 });
+
+function resizeSidebar() {
+	var windowHeight = $(window).height();
+	var windowWidth = window.innerWidth
+	|| document.documentElement.clientWidth
+	|| document.body.clientWidth;
+	var height = windowHeight - $(".main-content").offset().top - $('#footer').outerHeight() - 2;
+	$('.main-content').css('min-height', height);
+	$('.main-content').css('width', windowWidth - $('.w20').outerWidth() - 18);
+}
