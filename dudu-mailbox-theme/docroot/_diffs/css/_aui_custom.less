@@ -11,6 +11,12 @@
 @import "tab.less";
 @import "form.less";
 @import "tag.less";
+@import "panel.less";
+@import "file-list.less";
+@import "dudu-info-list.less";
+@import "typography.less";
+@import "responsive.less";
+@import "control.less";
 
 html {
     height: 100%;
@@ -25,9 +31,9 @@ body {
     font-size: @font-size;
     line-height: 1.42857143;
     height: 100%;
-    background: #F6F6F6;
     font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
     color: black;
+    background: @bg-color;
 }
 
 input, button, select, textarea {
@@ -62,47 +68,13 @@ label, input,  button,  select,  textarea {
     font-size: 12px;
 }
 
+select {
+    width: 206px;
+}
+
 select, input[type="file"] {
     height: 22px;
     line-height: 22px;
-}
-
-@media (max-width: 979px) {
-    input[type="color"],
-    input[type="date"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="email"],
-    input[type="month"],
-    input[type="number"],
-    input[type="password"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="text"],
-    input[type="time"],
-    input[type="url"],
-    input[type="week"],
-    select,
-    textarea,
-    .input-prepend .add-on,
-    .navbar-search .search-query,
-    .uneditable-input {
-        font-size: 12px!important;
-        padding: 0px 6px;
-    }
-    .btn {
-        font-size: 12px!important;
-    }
-}
-
-@media (max-width: 767px) and (max-width: 979px) {
-    .btn {
-        padding: 2px 24px!important;
-    }
-    
-    .btn + .btn {
-        margin-left: 0;
-    }
 }
 
 select,  textarea,  input[type="text"],  input[type="password"],  input[type="datetime"],  input[type="datetime-local"],  input[type="date"],  input[type="month"],  input[type="time"],  input[type="week"],  input[type="number"],  input[type="email"], input[type="url"],  input[type="search"],  input[type="tel"],  input[type="color"],  .uneditable-input {
@@ -209,15 +181,6 @@ fieldset {
         line-height: 150%;
         padding: 0;
     }
-}
-
-.control-group {
-    margin-bottom: @font-size;
-}
-
-.checkbox {
-    line-height: 24px;
-    border: 1px solid transparent;
 }
 
 .input-group {
@@ -329,34 +292,8 @@ fieldset {
     line-height: 36px;
 }
 
-.file-list {
-    ul {
-        list-style-type: none;
-        margin: 0;
-        li {
-            padding: 0px 6px;
-            border-radius: @base-radius;
-            border: 1px solid #d9d9d9;
-        }
-        li + li {
-            margin-top: 2px;
-        }
-    }
-    margin: 0 0 @base-margin;
-}
-
 .yui3-aclist-hidden {
     display: none;
-}
-
-.pager {
-    li {
-        >span, >a {
-            padding: 3px 12px;
-            .radius(3px);
-        }
-    }
-    line-height: 46px;
 }
 
 .yui3-skin-sam {
@@ -469,7 +406,7 @@ fieldset {
 
 .main-content-content {
     >.alert {
-        margin: 12px;
+        margin: @base-margin;
     }
 }
 
@@ -500,5 +437,5 @@ fieldset {
 }
 
 .accordion-inner {
-    padding: 12px;
+    padding: @base-margin;
 }

@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="${javascript_folder}/dudu.theme.js" charset="utf-8"></script>
 	<script type="text/javascript" src="${javascript_folder}/switchery.js" charset="utf-8"></script>
 	${theme.include(top_head_include)}
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='${javascript_folder}/bootstrap.min.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body class="${css_class}">

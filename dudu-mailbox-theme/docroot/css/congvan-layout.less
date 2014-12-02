@@ -3,7 +3,7 @@
 }
 
 .main-content  {
-    border: 1px solid #ddd;
+    //border: 1px solid #ddd;
     background: white;
     box-sizing: border-box;
     overflow: hidden;
@@ -12,7 +12,21 @@
         margin-left: -11px;
         margin-right: -11px;
         margin-top: -1px;
-        background: #F7F7F9;
+        //background: #F7F7F9;
+        background: @bg-color;
+        border-bottom: 0;
+        li.active {
+            border-color: white;
+            box-shadow: inset 0 3px rgba(0,0,0,.1);
+        }
+        li {
+            a {
+                &:hover {
+                    border-color: none;
+                    background: rgba(255,255,255,.1);
+                }
+            }
+        }
     }
 }
 
@@ -25,5 +39,32 @@
     overflow: hidden;
     .portlet-body {
         background: white;
+    }
+}
+
+.container-fluid {
+    padding-left: @base-margin;
+    padding-right: @base-margin;
+}
+
+.row {
+    margin-left: -@base-margin;
+    margin-right: -@base-margin;
+}
+
+@media (min-width: 1200px) {
+    .row {
+        margin-left: -@base-margin!important;
+        margin-right: -@base-margin;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    .row {
+        margin-left: -@base-margin!important;
     }
 }

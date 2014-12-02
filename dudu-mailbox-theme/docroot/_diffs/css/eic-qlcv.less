@@ -2,6 +2,7 @@
 @import "mixins.less";
 @import "portlet-menu.less";
 @import "congvan-layout.less";
+@import "chuyen-cong-van.less";
 
 #congvan-header {
     position: relative;
@@ -11,73 +12,12 @@
     }
 }
 
-#UserIcon {
-    color: rgb(0, 162, 0);
-}
-
-#GroupIcon {
-    color: #0083FF;
-}
-
-textarea {
-    box-sizing: border-box;
-}
-
-.form-actions {
-    text-align: right;
-}
-
-#content {
-    margin-bottom: 57px;
-}
-// For theme
-
-.input-group {
-    display: inline-flex;
-    width: 220px;
-    .checkbox {
-        padding-left: 36px;
-    }
-    input[type="text"], input[type="number"] {
-        flex: 1;
-        display: table-cell;
-        border-radius: 0;
-        margin: 0;
-        &:first-child {
-            .radius-left(3px);
-        }
-        &:last-child {
-            .radius-right(3px);
-        }
-    }
-    input[type="text"], input[type="number"] + input[type="text"], input[type="number"] {
-        margin-left: -1px;
-    }
-}
-
-ul.dudu-list + .form-group {
-    .btn {
-        margin: 0;
-    }
-}
-
 ul.dudu-list {
     list-style-type: none;
     margin: 0;
-    max-height: 90px;
-    overflow: auto;
-    transition: .2s ease;
-    &:hover {
-        z-index: 2;
-        max-height: 200px;
-        box-shadow: 0 0 2px rgba(0,0,0,.1), 0 5px 20px rgba(0,0,0,0.1);
-        overflow: auto;
-        padding: 0;
-    }
     li {
         position: relative;
         border: 1px solid transparent;
-        transition: .1s ease;
         blockquote {
             margin: 0;
             margin: 0;
@@ -118,92 +58,6 @@ ul.dudu-list {
     }
 }
 
-.paper {
-    transition: .2s ease;
-    overflow: hidden;
-    background: white;
-    position: relative;
-    border: 1px solid #ccc;
-    margin-top: -1px;
-    .btn-clipboard {
-        position: absolute;
-        top: 6px;
-        right: 12px;
-        z-index: 10;
-        display: block;
-        font-size: 12px;
-        cursor: pointer;
-        color: white;
-    }
-    .page-header {
-        padding: 5px 10px 0;
-        margin: 0;
-    }
-    .paper-content {
-        margin: 0;
-        padding: @base-margin;
-        position: relative;
-        .cke_chrome {
-            margin: 0 -12px;
-            border-left: transparent;
-            border-right: transparent;
-        }
-        .lfr-search-container {
-            margin: 0 -12px;
-        }
-    }
-    .paper-bottom {
-        .form-actions {
-            margin: 0;
-        }
-    }
-    form {
-        margin: 0;
-    }
-    .search-congvan-result {
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-top: -1px;
-        margin-bottom: -1px;
-    }
-}
-
-.paper-bottom {
-    .form-actions {
-        margin: 0;
-    }
-}
-
-.paper-content {
-    padding: 12px;
-    #congvan-header {
-        margin: -12px -12px 0;
-    }
-    .alert {
-        margin: 0;
-    }
-}
-
-
-
-.paper-congvan {
-    border: 1px solid rgba(0,0,0,.2);
-    box-sizing: border-box;
-    padding: @base-margin;
-    box-shadow: 0 1px 2px rgba(0,0,0,.1), inset 0 0 100px rgba(0,0,0,.05);
-    .radius(2px);
-    .control-group {
-        .control-label {
-            color: #999;
-        }
-    }
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
 //Color palllette
 @yellow: darken(yellow, 5);
 @blue: #007aff;
@@ -213,8 +67,6 @@ ul.dudu-list {
 @black: #000;
 @white: #34aadc;
 @percentLight: 40;
-
-
 
 .search-congvan-result {
     padding-top: 0;

@@ -1,18 +1,9 @@
 $(function() {
-	$(".btn-group").each(function() {
-		if ($(this).data('toggle') == "buttons")
-			$(this).children('label').each(function() {
-				var element = $(this);
-				element.addClass("btn btn-default");
-				var input = element.children("input");
-				if (input.is(':checked')) {
-					element.addClass('active');
-				}
-			});
-	});
 	resizeSidebar();
-	$( window ).resize(function() {
+	resizePanel();
+	$(window).resize(function() {
 		resizeSidebar();
+		//resizePanel();
 	});
 });
 
@@ -24,4 +15,16 @@ function resizeSidebar() {
 	var height = windowHeight - $(".main-content").offset().top - $('#footer').outerHeight() - 2;
 	$('.main-content').css('min-height', height);
 	$('.main-content').css('width', windowWidth - $('.w20').outerWidth() - 18);
+}
+
+function resizePanel() {
+	$(".row", "#thongTinCongVan").each(function(){
+		var height = 0;
+		$(".dudu-panel", this).each(function(){
+			height = Math.max(height, $(this).height());
+		});
+		$(".dudu-panel", this).each(function(){
+			$(this).css("min-height", height);
+		});
+	});
 }

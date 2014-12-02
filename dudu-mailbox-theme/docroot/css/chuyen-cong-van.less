@@ -1,0 +1,58 @@
+#chuyenCongVan {
+    padding: 0;
+    .control-group {
+        padding: 5px @base-margin;
+        //border-bottom: 1px solid #ddd;
+        margin-bottom: 0;
+        label {
+            color: #999;
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 0;
+        }
+        .lfr-input-date {
+            float: left;
+            .input-medium {
+                border-color: transparent!important;
+                margin: 0;
+            }
+        }
+        .cimarit-tags {
+            border-color: transparent!important;
+        }
+        .mini-editor {
+            margin-left: -11px;
+            margin-right: -11px;
+            border-left: 0;
+            border-right: 0;
+            margin-bottom: -6px;
+        }
+        .field-wrapper {
+            .btn {
+                margin-top: 0px;
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        &:after {
+            .clear-float;
+        }
+    }
+    .field-wrapper {
+        .btn {
+            padding: 0 10px;
+            line-height: 20px;
+            margin-top: 0;
+        }
+    }
+    .cke_chrome, .cke_top {
+        border-color: transparent;
+    }
+    .cke_top {
+        .cke_combo_button, .cke_button {
+            box-shadow: none;
+            border: 0;
+        }
+    }
+}

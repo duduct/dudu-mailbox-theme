@@ -2039,6 +2039,8 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
 /* CSS crunched with Crunch - http://crunchapp.net/ */
 /*Color */
 /*Blue*/
+/*Green*/
+/*Orange*/
 /*Grey*/
 /*Green*/
 /*Radius*/
@@ -2119,20 +2121,15 @@ body {
   clear: both; }
 
 #footer {
-  text-align: center;
   font-size: 10px;
   color: #999;
-  margin: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #F6F6F6;
-  padding: 5px 0px; }
+  padding: 5px 0px;
+  background: #f6f6f6; }
 
 #footer p {
   margin: 0;
   text-align: center;
-  cursor: pointer; }
+  cursor: default; }
 
 #footer #footer-company-name,
 #footer #footer-company-subtitle {
@@ -2143,12 +2140,8 @@ body {
   font-size: 10px;
   color: #9e9e9e; }
 
-#wrapper {
-  min-height: 100%;
-  position: relative; }
-
 #navigation {
-  padding: 12px 0 0; }
+  padding: 10px 0 0; }
 
 #navigation ul li {
   transition: .2s ease; }
@@ -2217,7 +2210,7 @@ body {
   margin: 0 auto; }
 
 .portlet-body .alert {
-  margin: 12px; }
+  margin: 10px; }
 
 .lfr-nav-hover .modify-pages .delete-tab {
   text-shadow: none;
@@ -2234,7 +2227,7 @@ body {
   color: white; }
 
 .cimarit-tool form {
-  margin: 12px auto;
+  margin: 10px auto;
   margin-bottom: 0;
   font-size: 0; }
 
